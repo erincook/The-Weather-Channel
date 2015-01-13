@@ -1,0 +1,120 @@
+body {
+  font-family: "PT Sans", sans-serif;
+  color: #393939;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px solid #697da2;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px; }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 24px; } }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 24px; } }
+  @media (min-device-width: 480px) and (max-device-width: 768px) {
+    h1 {
+      font-size: 16px; } }
+  @media (min-device-width: 768px) and (max-device-width: 1024px) {
+    h1 {
+      font-size: 16px; } }
+  @media (min-device-width: 320px) and (max-device-width: 480px) {
+    h1 {
+      font-size: 14px; } }
+
+h2 {
+  font-size: 14px;
+  clear: both;
+  padding: 2px;
+  font-weight: bold; }
+
+p {
+  clear: both; }
+
+li {
+  list-style-type: circle; }
+
+section {
+  padding: 2%;
+  float: left;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  width: 29.3%;
+  border-bottom: 2px solid #697da2; }
+  @media (min-device-width: 480px) and (max-device-width: 768px) {
+    section {
+      font-size: 14px;
+      width: 90%;
+      text-align: center; } }
+  @media (min-device-width: 768px) and (max-device-width: 1024px) {
+    section {
+      font-size: 14px;
+      width: 90%;
+      text-align: center; } }
+  @media (min-device-width: 320px) and (max-device-width: 480px) {
+    section {
+      font-size: 8px;
+      width: 90%;
+      text-align: center; } }
+
+section:nth-child(2) {
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#FFF));
+  background-image: -webkit-linear-gradient(top, #CCC, #FFF);
+  background-image: -moz-linear-gradient(top, #CCC, #FFF);
+  background-image: -ms-linear-gradient(top, #CCC, #FFF);
+  background-image: -o-linear-gradient(top, #CCC, #FFF);
+  background-image: linear-gradient(top, #CCC, #FFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor'); }
+
+section:nth-child(3) {
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#FFF));
+  background-image: -webkit-linear-gradient(top, #EEE, #FFF);
+  background-image: -moz-linear-gradient(top, #EEE, #FFF);
+  background-image: -ms-linear-gradient(top, #EEE, #FFF);
+  background-image: -o-linear-gradient(top, #EEE, #FFF);
+  background-image: linear-gradient(top, #EEE, #FFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor'); }
+
+section:nth-child(4) {
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#999), to(#FFF));
+  background-image: -webkit-linear-gradient(top, #999, #FFF);
+  background-image: -moz-linear-gradient(top, #999, #FFF);
+  background-image: -ms-linear-gradient(top, #999, #FFF);
+  background-image: -o-linear-gradient(top, #999, #FFF);
+  background-image: linear-gradient(top, #999, #FFF);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor'); }
+
+div.img {
+  padding: 1px;
+  height: 184px;
+  width: 315px;
+  background-image: url("http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0"); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    div.img {
+      background-image: url(" http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
+      -webkit-background-size: 200px 100px;
+      -moz-background-size: 200px 100px;
+      -o-background-size: 200px 100px;
+      background-size: 200px 100px; } }
+
+.surprise {
+  width: 100%;
+  font-style: italic;
+  font-weight: bold;
+  height: 30px;
+  color: #3c8ed2;
+  font-size: 15px;
+  border: 2px solid #697da2;
+  text-align: center;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

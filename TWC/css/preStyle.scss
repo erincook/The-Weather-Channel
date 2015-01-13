@@ -1,0 +1,142 @@
+$font-stack: 'PT Sans', sans-serif;
+$primary-color: #697da2;
+$secondary-color: #3c8ed2;
+$tertiary-color: #393939;  
+
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 1200px) { @content ; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 1024px) { @content ; }
+	}
+    @else if $point == tablet {
+		@media (min-device-width : 768px) and (max-device-width : 1024px)  { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-device-width : 480px) and (max-device-width : 768px)  { @content ; }
+	}
+  @else if $point == mobileonly {
+     @media (min-device-width : 320px) and (max-device-width : 480px)   { @content ; }
+
+  }
+}
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; 
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); 
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); 
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); 
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor');
+}
+@mixin background-image-retina($width, $height) {
+  background-image: url("http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0");
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+      background-image: url(" http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at");
+      -webkit-background-size: $width $height;
+      -moz-background-size: $width $height;
+      -o-background-size: $width $height;
+      background-size: $width $height;
+    }
+  }
+}
+body{
+	font-family: $font-stack; 
+	color: $tertiary-color; 
+	line-height: 1.2; 
+}
+h1{
+	
+	font-size: 24px;
+	@include breakpoint(desktop){
+		font-size: 24px; 
+	}
+	@include breakpoint(laptop){
+		font-size: 24px; 
+	}
+	@include breakpoint(phablet){
+		font-size: 16px; 
+	}
+	@include breakpoint(tablet){
+		font-size: 16px; 
+	}
+	@include breakpoint(mobileonly){
+		font-size: 14px; 
+	}
+	text-align: center;
+	border-bottom: 2px solid $primary-color; 
+	width: 100%; 
+	margin-bottom: 10px; 	
+	padding: 10px; 
+}
+h2{
+	font-size: 14px; 
+	clear: both; 
+	padding: 2px; 
+	font-weight: bold; 
+}
+p{
+	clear: both; 
+}
+li{
+	list-style-type: circle;
+}
+section{
+	padding: 2%; 
+	float: left; 
+	white-space: wrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	font-size: 14px; 
+	width: 29.3%; 
+		@include breakpoint(phablet){
+		font-size: 14px;
+		width: 90%; 
+		text-align: center;
+	}
+	@include breakpoint(tablet){
+		font-size: 14px; 
+		width: 90%; 
+		text-align: center;
+	}
+	@include breakpoint(mobileonly){
+		font-size: 8px; 
+		width: 90%; 
+		text-align: center;
+	}
+	border-bottom: 2px solid $primary-color; 
+}
+section:nth-child(2){
+ @include linear-gradient(#CCC, #FFF); 
+}
+section:nth-child(3){
+ @include linear-gradient(#EEE, #FFF); 
+}
+section:nth-child(4){
+ @include linear-gradient(#999, #FFF); 
+}
+div.img{
+	padding: 1px; 
+	height: 184px;
+	width: 315px;
+	@include background-image-retina(200px, 100px);
+}
+.surprise{
+	width: 100%; 
+	font-style: italic; 
+	font-weight: bold; 
+	height: 30px; 
+	color: $secondary-color; 
+	font-size: 15px; 
+	border: 2px solid $primary-color; 
+	text-align: center;  
+	cursor: pointer; 
+}
